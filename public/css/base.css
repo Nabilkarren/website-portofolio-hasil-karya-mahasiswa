@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    appearance: none;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    font-family: 'Sofia Pro';
+    user-select: none;
+    overflow-x: hidden;
+    background: #f4f6f9;
+}
+
+.container {
+    height: 100%;
+    /* width: 100%; */
+    /* margin: auto; */
+}
+
+.container .navbar {
+    background: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 100px;
+    border-bottom: 1px solid rgba(42, 35, 54, 0.2);
+}
+
+.container .navbar .feature-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 23px;
+}
+
+.container .navbar .feature-list a {
+    color: #2A2336;
+    transition: ease 0.3s;
+}
+
+.container .navbar .feature-list a:hover {
+    color: #316AFF;
+}
+
+.container .navbar .user-sign-in button {
+    border-radius: 8px;
+    padding: 13px 39px;
+    color: white;
+    background: #316AFF;
+    border: none;
+    cursor: pointer;
+}
+
+.container .navbar .user-sign-in button:hover {
+    background: #274ce2;
+}
+
+.container .content {
+    margin-top: 40px;
+    padding: 0 100px 0 100px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(336px, 1fr));
+    gap: 40px;
+}
+
+.container .content .karya-card {
+    /* max-width: 295px;
+    max-height: 350px; */
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+    background: white;
+    /* transition: all 0.3s ease; */
+}
+
+/* .container .content .karya-card:hover {
+    padding: 3px;
+} */
+
+.container .content .karya-card .small-thumbnail {
+    max-height: 180px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: stretch;
+}
+
+.container .content .karya-card .small-thumbnail img {
+    min-width: 100%;
+    max-width: none;
+    border-radius: 8px 8px 0 0;
+}
+
+.container .content .karya-card .card-content {
+    /* background: white; */
+    padding: 20px 12px;
+    /* border-radius: 8px; */
+}
+
+.container .content .karya-card .card-content .kategori-prodi {
+    font-size: 14px;
+    font-weight: 200;
+}
+
+.container .content .karya-card .card-content .karya-title {
+    margin-top: 20px;
+}
+
+.container .content .karya-card .card-content .detail-karya {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+    font-size: 12px;
+}
+
+.container .content .karya-card .card-content .detail-karya .uploader {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+}
+
+.container .content .karya-card .card-content .detail-karya .uploader img {
+    width: 35px;
+    height: 35px;
+    border-radius: 20px;
+}
