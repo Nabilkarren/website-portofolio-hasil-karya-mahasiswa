@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\User\UserController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,14 +15,23 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('login');
-});
+// Route::get('/home', function () {
+//     return view('home');
+// });
+Route::get('/', [UserController::class, 'guest'])->name('guest.home');
 
-Route::get('/home', function () {
-    return view('home');
-});
+Route::get('/login', [UserController::class, 'index'])->name('guest.login');
 
-Route::view('/base', 'layouts.base')->name('user.home');
+Route::get('/karya', [UserController::class, 'lihatKarya'])->name('lihat.karya');
 
-Route::view('/dashboard', 'dashboard');
+Route::get('/dashboard', [UserController::class, 'dashboard'])->name('user.dashboard');
+
+Route::get('/my-work', [UserController::class, 'myWork'])->name('user.work');
+
+Route::get('/work-detail', [UserController::class, 'myWorkDetail'])->name('user.work.detail');
+
+Route::get('/add-work', [UserController::class, 'addWork'])->name('user.work.create');
+
+Route::get('/edit-karya', [UserController::class, 'editKarya'])->name('user.work.edit');
+
+Route::get('/profile', [UserController::class, 'profile'])->name('user.profile');

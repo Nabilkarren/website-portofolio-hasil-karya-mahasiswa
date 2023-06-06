@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/login.css">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <title>UPortfolio | @yield('title')</title>
+    <title>UPortfolio | Login</title>
 </head>
 
 <body>
@@ -32,7 +32,7 @@
             </div>
             <div class="back-home">
                 <span class="material-symbols-outlined">keyboard_backspace</span>
-                <a href="{{ route('user.home') }}">Back to Home</a>
+                <a href="{{ route('guest.home') }}">Back to Home</a>
             </div>
         </div>
         <div class="right-side">
